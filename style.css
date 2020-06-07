@@ -1,3 +1,63 @@
+@font-face{
+    /*字型名稱*/
+    font-family: Ngaan;
+    /*字型來源*/
+    src: url(./font/I.Ngaan.ttf);
+}
 *{
-    color:gold;
+    margin:0;
+    padding:0;
+    font-family: 微軟正黑體;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding:30px 100px;
+    /* 定位：固定 */
+    position: fixed;
+    /* 上：0 bottom 下 */
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#logo span{
+    font-family: Ngaan;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#nav{
+    display: grid;
+    /*grid-template-columns:1fr 1fr 1fr; 第一種寫法*/
+    /*對齊作用 重複三次 grid-template-columns:repeat(3,1fr);*/
+    grid-template-columns: repeat(3,100px);
+    width:1200px;
+    margin:0 auto;
+    /*對齊項目 (垂直)*/
+    align-items: center;
+    text-align: center;
+}
+
+#nav a{
+    /*文字裝飾 可用來做底線、刪除線*/  
+    text-decoration: none;
+    color:brown;
+    font-size: 20px;
+     /*轉場的時間*/
+    transition: 0.3s;
+}
+
+/*hover滑入 可加在任何元素上*/
+#nav a:hover{
+    color:black;
+    font-size: 22px;
 }
